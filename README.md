@@ -1,4 +1,4 @@
-# Zernia_2021_eLife
+# Zernia_2021_Scc2-4condensates
 
 This repository contains data and analysis supporting the publication "The loader complex Scc2/4 forms co-condensates with DNA as loading sites for cohesin"
 
