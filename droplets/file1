@@ -1,1 +1,21 @@
+Function for background subtraction utilized in IGOR Pro 8.0
 
+Function removeTemporalMedian()
+	Variable ch=0
+	Wave imagestack_splitseries
+	Make/O/N=(dimsize(imagestack_splitseries,0), dimsize(imagestack_splitseries,1), dimsize(imagestack_splitseries,2)) minusmedian
+	Make/O/N=(dimsize(imagestack_splitseries,0), dimsize(imagestack_splitseries,1)) background
+	Variable totalmedian = statsmedian(imagestack_splitseries)
+	//subtract for each pixel the median pixel value over time
+	Variable i, j
+	for(i=0;i<dimsize(imagestack_splitseries,0);i+=1)
+		for(j=0;j<dimsize(imagestack_splitseries,1);j+=1)
+			Duplicate/O/R=[i][j][][ch]/FREE imagestack_splitseries, column
+			Redimension/N=(dimsize(column,2)) column
+			Variable med = statsmedian(column)
+			background[i][j] = med
+			minusmedian[i][j][] = imagestack_splitseries[i][j][r][ch] -med
+		endfor
+	endfor
+	minusmedian += totalmedian
+End
