@@ -1,0 +1,1 @@
+Force extension curves for the first stretch and relax cycle of lambda DNA tethers after incubation with 10 nM Scc2/4.
