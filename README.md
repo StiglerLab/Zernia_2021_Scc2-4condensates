@@ -4,6 +4,5 @@ This repository contains data and analysis supporting the publication "The loade
 
 Content: 
 - videos of droplet microscopy and function for background correction
-- qualitative and quantitative analysis of DNA compaction
-- analysis of cohesin binding behavior
-- 
+- qualitative and quantitative analysis of DNA compaction, exemplary videos of DNA compaction by Scc2/4
+- analysis of cohesin binding behavior, exemplary video of cohesin recruitment to condensates
