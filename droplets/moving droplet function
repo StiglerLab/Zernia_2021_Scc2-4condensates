@@ -1,5 +1,5 @@
 Function for background subtraction utilized in IGOR Pro 8.0
-
+```
 Function removeTemporalMedian()
 	Variable ch=0
 	Wave imagestack_splitseries
@@ -19,3 +19,4 @@ Function removeTemporalMedian()
 	endfor
 	minusmedian += totalmedian
 End
+```
