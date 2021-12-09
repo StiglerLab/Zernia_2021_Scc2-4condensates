@@ -1,7 +1,6 @@
 Function for background subtraction utilized in IGOR Pro 8.0:
 
-```ruby
-Function removeTemporalMedian()
+```Function removeTemporalMedian()
 	Variable ch=0
 	Wave imagestack_splitseries
 	Make/O/N=(dimsize(imagestack_splitseries,0), dimsize(imagestack_splitseries,1), dimsize(imagestack_splitseries,2)) minusmedian
@@ -19,6 +18,5 @@ Function removeTemporalMedian()
 		endfor
 	endfor
 	minusmedian += totalmedian
-End
-```
+End```
 
